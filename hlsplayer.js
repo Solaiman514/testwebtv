@@ -41,14 +41,14 @@ async function hlsplayerplay(urlsrc){
   }
 }
 
-document.getElementById("ch1").onclick = function() { hlsplayerplay(url_start.concat(url_1)); videomodaldisplay(); }
+document.getElementById("ch1").onclick = function() { hlsplayerplay(url_1); videomodaldisplay(); }
 document.getElementById("ch2").onclick = function() { hlsplayerplay(url_2); videomodaldisplay(); }
 document.getElementById("ch3").onclick = function() { hlsplayerplay(url_3); videomodaldisplay(); }
 document.getElementById("ch4").onclick = function() { hlsplayerplay(url_4); videomodaldisplay(); }
-document.getElementById("ch5").onclick = function() { hlsplayerplay(url_start.concat(url_5)); videomodaldisplay(); }
-document.getElementById("ch6").onclick = function() { hlsplayerplay(url_start.concat(url_6)); videomodaldisplay(); }
-document.getElementById("ch7").onclick = function() { hlsplayerplay(url_start.concat(url_7)); videomodaldisplay(); }
-document.getElementById("ch8").onclick = function() { hlsplayerplay(url_start.concat(url_8)); videomodaldisplay(); }
-document.getElementById("ch9").onclick = function() { hlsplayerplay(url_start.concat(url_9)); videomodaldisplay(); }
-document.getElementById("ch10").onclick = function() { hlsplayerplay(url_start.concat(url_10)); videomodaldisplay(); }
-document.getElementById("ch11").onclick = function() { hlsplayerplay(url_start.concat(url_11)); videomodaldisplay(); }
+document.getElementById("ch5").onclick = function() { hlsplayerplay(url_5); videomodaldisplay(); }
+document.getElementById("ch6").onclick = function() { hlsplayerplay(url_6); videomodaldisplay(); }
+document.getElementById("ch7").onclick = function() { hlsplayerplay(url_7); videomodaldisplay(); }
+document.getElementById("ch8").onclick = function() { hlsplayerplay(url_8); videomodaldisplay(); }
+document.getElementById("ch9").onclick = function() { hlsplayerplay(url_9); videomodaldisplay(); }
+document.getElementById("ch10").onclick = function() { hlsplayerplay(url_10); videomodaldisplay(); }
+document.getElementById("ch11").onclick = function() { hlsplayerplay(url_11); videomodaldisplay(); }
