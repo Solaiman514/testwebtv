@@ -1,22 +1,32 @@
-var url_1 = 'aHR0cDovLzEwMy41NS4xNDQuNDYvaGxzL0dhemktVFYubTN1OA==';
-var url_2 = 'aHR0cDovLzE3Mi4xNi4xMjguMjUwOjgwODEvbGl2ZS9nYXppdHYvY2h1bmtzLm0zdTg=';
-var url_3 = 'aHR0cDovLzEwMy41NS4xNDQuNDYvaGxzL3Qtc3BvcnRzLm0zdTg=';
-var url_4 = 'aHR0cHM6Ly90ZW1waW5mb2Jhc2UuamFnb2JkLmNvbTo0NDQvY1pWeWRtVnlYOFJwYkVVOU1pOHhOeTh5TURFMEdJRFU2Umd6UTZOVEFnZEVvYWVGemJGOTJZV3hJWlQwMFUwZXpOMUl6TXlmdmNHVk1aRUpDVEVGV2VWTjNQVE9tZEZzYVdSdGFXNTFhaVBoblBUSS90aXRhc2guc3RyZWFtL2NodW5rcy5tM3U4';
-var url_5 = 'aHR0cHM6Ly90ZW1waW5mb2Jhc2UuamFnb2JkLmNvbTo0NDQvY1pWeWRtVnlYOFJwYkVVOU1pOHhOeTh5TURFMEdJRFU2Umd6UTZOVEFnZEVvYWVGemJGOTJZV3hJWlQwMFUwZXpOMUl6TXlmdmNHVk1aRUpDVEVGV2VWTjNQVE9tZEZzYVdSdGFXNTFhaVBoblBUSS9hdG5iZC04LW9yZy5zdHJlYW0vY2h1bmtzLm0zdTg=';
+var url_start = 'aHR0cHM6Ly90ZW1waW5mb2Jhc2UuamFnb2JkLmNvbTo0NDQvY1pWeWRtVnlYOFJwYkVVOU1pOHhOeTh5TURFMEdJRFU2Umd6UTZOVEFnZEVvYWVGemJGOTJZV3hJWlQwMFUwZXpOMUl6TXlmdmNHVk1aRUpDVEVGV2VWTjNQVE9tZEZzYVdSdGFXNTFhaVBoblBUSS9';
+var url_1 = '0aXRhc2guc3RyZWFtL2NodW5rcy5tM3U4';
+var url_2 = 'aHR0cDovLzEwMy41NS4xNDQuNDYvaGxzL3Qtc3BvcnRzLm0zdTg=';
+var url_3 = 'aHR0cDovLzEwMy41NS4xNDQuNDYvaGxzL0dhemktVFYubTN1OA==';
+var url_4 = 'aHR0cDovLzE3Mi4xNi4xMjguMjUwOjgwODEvbGl2ZS9nYXppdHYvY2h1bmtzLm0zdTg=';
+var url_5 = 'hbmFuZGF0di5zdHJlYW0vY2h1bmtzLm0zdTg=';
+var url_6 = 'hdG5iZC04LW9yZy5zdHJlYW0vY2h1bmtzLm0zdTg=';
+var url_7 = 'hdG5pc2xhbWljdHYuc3RyZWFtL2NodW5rcy5tM3U4';
+var url_8 = 'hdG5tdXNpYy5zdHJlYW0vY2h1bmtzLm0zdTg=';
+var url_9 = 'hdG53cy1zZy5zdHJlYW0vY2h1bmtzLm0zdTg=';
+var url_10 = 'iYW5nbGEyMXR2MDAwODg5OTU2LXNnLnN0cmVhbS9jaHVua3MubTN1OA==';
+var url_11 = 'iYW5nbGF2MDAwLnN0cmVhbS9jaHVua3MubTN1OA==';
 
-var videomodal = document.getElementById("video");
-var spanmodal = document.getElementById("span-modal");
-videomodal.style.display='none';
-spanmodal.style.display='none';
-spanmodal.className='w3-button w3-display-topright w3-red';
+var mainpage = document.getElementById("main-page");
+var modalpage = document.getElementById("modal-page");
+var videodisplay = document.getElementById("video");
+var closebutton = document.getElementById("close-button");
+modalpage.style.display='none';
 
-document.getElementById("ch01").onclick = function() { hlsplayerplay(url_5); videomodaldisplay(); }
-document.getElementById("ch02").onclick = function() { hlsplayerplay(url_4); videomodaldisplay(); }
-
-spanmodal.onclick = function(){
-  videomodal.style.display='none';
-  spanmodal.style.display='none';
+closebutton.onclick = function(){
+  modalpage.style.display='none';
+  mainpage.style.display='block';
   document.getElementById('video').src='';
+}
+
+async function videomodaldisplay(){
+  mainpage.style.display='none';
+  modalpage.style.display='block';
+  videomodal.style.background='white';
 }
 
 async function hlsplayerplay(urlsrc){
@@ -31,13 +41,14 @@ async function hlsplayerplay(urlsrc){
   }
 }
 
-async function videomodaldisplay(){
-  videomodal.style.display='block';
-  spanmodal.style.display='block';
-  videomodal.style.position='absolute';
-  videomodal.style.left='0';
-  videomodal.style.right='0';
-  videomodal.style.top='0';
-  videomodal.style.bottom='0';
-  videomodal.style.background='white';
-}
+document.getElementById("ch1").onclick = function() { hlsplayerplay(url_1); videomodaldisplay(); }
+document.getElementById("ch2").onclick = function() { hlsplayerplay(url_2); videomodaldisplay(); }
+document.getElementById("ch3").onclick = function() { hlsplayerplay(url_3); videomodaldisplay(); }
+document.getElementById("ch4").onclick = function() { hlsplayerplay(url_4); videomodaldisplay(); }
+document.getElementById("ch5").onclick = function() { hlsplayerplay(url_5); videomodaldisplay(); }
+document.getElementById("ch6").onclick = function() { hlsplayerplay(url_6); videomodaldisplay(); }
+document.getElementById("ch7").onclick = function() { hlsplayerplay(url_7); videomodaldisplay(); }
+document.getElementById("ch8").onclick = function() { hlsplayerplay(url_8); videomodaldisplay(); }
+document.getElementById("ch9").onclick = function() { hlsplayerplay(url_9); videomodaldisplay(); }
+document.getElementById("ch10").onclick = function() { hlsplayerplay(url_10); videomodaldisplay(); }
+document.getElementById("ch11").onclick = function() { hlsplayerplay(url_11); videomodaldisplay(); }
